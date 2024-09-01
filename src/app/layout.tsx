@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geologica } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/custom/Navbar";
+import Footer from "@/components/custom/Footer";
 
 const geologica = Geologica({ subsets: ["latin"] });
 
@@ -16,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={geologica.className}>{children}</body>
+      <body className={geologica.className}>
+        <Navbar />
+        {children}
+        <Footer />
+        </body>
     </html>
   );
 }

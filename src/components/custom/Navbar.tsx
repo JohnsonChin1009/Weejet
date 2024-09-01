@@ -15,17 +15,6 @@ export default function Navbar() {
         setIsOpen(!isOpen);
     };
 
-    const handleClickLink = (targetID: string) => {
-        const target = document.getElementById(targetID);
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-            window.history.pushState(null, "", `#${targetID}`);
-            if (isOpen) {
-                toggleMenu();
-            }
-        }
-    };
-
     useEffect(() => {
         {/*const handleScroll = () => {
             const threshold = window.innerHeight * 0.1;
@@ -54,7 +43,7 @@ export default function Navbar() {
                 ref={navbarRef}
                 className="flex flex-wrap items-center justify-between px-4 lg:px-10 py-4 border-b sticky top-0 bg-white z-50"
             >
-                <a href="/">
+                <Link href="/">
                     {/* Logo Section of the NavBar */}
                     <div className="h-[50px] w-[100px] lg:w-[200px] lg:h-[80px] relative">
                         <Image
@@ -65,7 +54,7 @@ export default function Navbar() {
                             className="object-contain"
                         />
                     </div>
-                </a>
+                </Link>
                 <div className="flex lg:hidden" onClick={toggleMenu}>
                     {/* Mobile Menu Icon */}
                     <HiMenu
@@ -86,7 +75,7 @@ export default function Navbar() {
                     <ul className="flex flex-col gap-10 text-center">
                         {links.map((item) => (
                             <li key={item.id}>
-                                <Link href={`#${item.url}`} onClick={() => handleClickLink(`${item.url}`)}>
+                                <Link href={item.url} onClick={toggleMenu}>
                                     {item.text}
                                 </Link>
                             </li>
@@ -99,7 +88,7 @@ export default function Navbar() {
                     <ul className="flex flex-row space-x-10 items-center">
                         {links.map((item) => (
                             <li key={item.id} className="hover:font-medium">
-                                <Link href={`#${item.url}`} onClick={() => handleClickLink(`${item.url}`)}>
+                                <Link href={item.url}>
                                     {item.text}
                                 </Link>
                             </li>
@@ -114,22 +103,22 @@ export default function Navbar() {
 const links = [
     {
         id: 1,
-        url: "section1",
-        text: "Section 1",
+        url: "/widgets",
+        text: "Widgets",
     },
     {
         id: 2,
-        url: "section2",
+        url: "#section2", // Ensure this is an in-page section id
         text: "Section 2",
     },
     {
         id: 3,
-        url: "section3",
+        url: "#section3",
         text: "Section 3",
     },
     {
         id: 4,
-        url: "section4",
+        url: "#section4",
         text: "Section 4",
     },
 ];

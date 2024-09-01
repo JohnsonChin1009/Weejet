@@ -1,5 +1,3 @@
-import Navbar from "@/components/custom/Navbar";
-import Footer from "@/components/custom/Footer"
 import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa6";
 import { RiNotionFill } from "react-icons/ri";
@@ -10,7 +8,6 @@ export default function Home() {
   return (
     <>
       <main>
-        <Navbar />
           <section id="hero" className="px-4 lg:px-20 py-[100px] lg:py-[140px] text-center space-y-4 lg:space-y-6">
             <h1 className="text-[24px] lg:text-[40px] font-bold">Weejet</h1>
             <p className="text-[16px] lg:text-[20px] lg:w-[400px] mx-auto">
@@ -69,7 +66,6 @@ export default function Home() {
             <p className="py-4 lg:py-6 lg:text-[20px]">Weejet wouldn&apos;t be possible without them!</p>
             <TeamCarousel />
           </section>
-        <Footer />
       </main>
     </>
   )

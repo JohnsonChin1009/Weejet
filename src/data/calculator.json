@@ -1,0 +1,7 @@
+{
+  "id": "calculator",
+  "title": "Calculator",
+  "description": "This is a calculator",
+  "author": "LKang",
+  "code": "/widgets/calculator/calculator.tsx"
+}

@@ -1,0 +1,32 @@
+.calculator-widget {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 300px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .calculator-display input {
+    width: 90%;
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 16px;
+    text-align: right;
+  }
+  
+  .calculator-buttons button {
+    margin: 5px;
+    padding: 10px;
+    width: 50px;
+    font-size: 14px;
+  }
+  
+  .clear-button {
+    width: 220px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+  }
+  

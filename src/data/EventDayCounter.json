@@ -1,0 +1,7 @@
+{
+  "id": "EventDayCounter",
+  "title": "EventDayCounter",
+  "description": "EventDayCounter",
+  "author": "Teoh Wei Lun",
+  "code": "/widgets/EventDayCounter/EventDayCounter.tsx"
+}

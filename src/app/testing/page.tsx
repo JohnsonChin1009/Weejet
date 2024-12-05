@@ -1,4 +1,5 @@
 "use client";
+import CoinToss from "../widgets/CoinToss/cointoss";
 
 export default function TestingPage() {
     return (
@@ -8,6 +9,7 @@ export default function TestingPage() {
                     <h1 className="font-bold text-[30px]">This is the testing page for Weejets.</h1>
                     <p>Just import your created widget here for testing.</p>
                 </div>
+                <CoinToss/>
             </main>
         </>
     )
